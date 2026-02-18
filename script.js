@@ -20,6 +20,3 @@ function book() {
   });
 
 }
-fetch("/remaining")
-  .then(res => res.json())
-  .then(data => document.getElementById("remaining").innerText = data.remaining);
