@@ -9,9 +9,6 @@ let totalTickets = 50;
 app.post("/book", function(req, res) {
 
   let number = req.body.number;
-if (!number || number <= 0 || isNaN(number)) {
-  return res.json({ message: "Enter a valid number", remaining: totalTickets });
-}
 
   if (number > 4) {
     res.json({ message: "Max 4 tickets allowed", remaining: totalTickets });
